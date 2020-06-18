@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from piggyvest.views import InterestCalc
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', InterestCalc.as_view()),
 ]
