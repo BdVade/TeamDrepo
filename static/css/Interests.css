@@ -1,0 +1,50 @@
+nav ul li {
+  color: #144499 !important;
+}
+
+.navnav {
+  border: none !important;
+}
+
+.tog {
+  color: #144499;
+}
+
+.list {
+  color: #144499;
+}
+
+input[type='text'] {
+  background-color: #edf2f7;
+  color: #718096 !important;
+}
+
+li {
+  color: #144499 !important;
+}
+
+.createbtn {
+  border: 1px solid #144499;
+
+  border-radius: 5px;
+  color: #144499;
+  vertical-align: center;
+}
+
+.createbtn:hover {
+  background-color: #144499 !important;
+  color: white !important;
+}
+
+.int {
+  color: #2295f2;
+}
+
+.subint {
+  color: #718096;
+}
+
+.bigcard {
+  /* margin-top: -50vh; */
+  color: #144499;
+}
