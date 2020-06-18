@@ -50,7 +50,9 @@ class InterestCalc(View):
             elif form.cleaned_data["choice"] == "Flex Dollar":
                 rate = 0.06
             interest = (capital * time * rate)
+            total = interest + capital
             params["interest"] = interest
+            params["total"] = total
         else:
             return HttpResponse("form filled incorrectly go back to refill" + form.errors)
         return render(request, "interest.html", params)

@@ -1,11 +1,92 @@
 <!DOCTYPE html>
 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
 
-{% block content %}
-<form method="post" action=".">{% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Calculate">
-</form>
 
 
-{% endblock %}
+    <link rel="stylesheet" href="../../static/css/Interests.css" />
+    <title> The Better Way To Save & Invest</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper navnav white">
+        <div class="container">
+
+          <a href="#" class="brand-logo"><img src="./piggy-png.png" alt="piggybank"></a>
+          <a href="#" data-target="mobile-demo" class="navnav sidenav-trigger"><i class="material-icons">,<span class="tog">menu</span></i></a>
+          <ul class="right list hide-on-med-and-down">
+            <li><a href="#">About</a></li>
+          <li><a href="#">Stories</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Log In</a></li>
+          <a class="waves-effect waves-light btn createbtn white">Create a Free Account</a>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="#">About</a></li>
+      <li><a href="#">Stories</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+
+    <div class="container">
+
+      <h2 class="int center">Interest Calculator</h2>
+      <h6 class="subint center">Let see how much interest you will make by saving wth us</h6>
+
+      <br>
+      <br>
+
+      <div>
+        <div>
+          <div class="input-field">
+
+         {% block content %}
+            <form method="post" action=".">{% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Calculate">
+            </form>
+
+
+            {% endblock %}
+
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+
+      </div>
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+       $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
+    </script>
+  </body>
+</html>
