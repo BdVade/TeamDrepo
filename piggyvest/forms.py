@@ -1,13 +1,11 @@
 from django import forms
-"""
-Choices = (("cs", "Piggybank CoreSavings"),
-           ("tl", "Target lock"), ("flex", "Flex"), ("flex dollar", "Flex Dollar"))
+
+Choices = (("Piggybank CoreSavings","Piggybank CoreSavings"),
+           ("Target lock","Target lock"), ("Flex","Flex"), ("Flex Dollar","Flex Dollar"),)
 
 
-class Plansform(forms.Form):
-    choice = forms.ChoiceField(Choices)
-
-"""
 class Interestform(forms.Form):
+
     capital = forms.IntegerField(label="capital")
     time = forms.IntegerField(label="saving time in years")
+    choice = forms.ChoiceField(choices=Choices)

@@ -41,9 +41,16 @@ class InterestCalc(View):
         if form.is_valid():
             capital = form.cleaned_data["capital"]
             time = form.cleaned_data["time"]
-            interest = (capital * time * 0.1)
+            if form.cleaned_data["choice"] == "Piggybank CoreSavings":
+                rate = 0.1
+            elif form.cleaned_data["choice"] == "Target lock":
+                rate = 0.1
+            elif form.cleaned_data["choice"] == "Flex":
+                rate = 0.1
+            elif form.cleaned_data["choice"] == "Flex Dollar":
+                rate = 0.06
+            interest = (capital * time * rate)
             params["interest"] = interest
-
         else:
             return HttpResponse("form filled incorrectly go back to refill" + form.errors)
         return render(request, "interest.html", params)
